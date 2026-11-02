@@ -18,7 +18,7 @@
         :root {
             --bg-base: #070707;
             --bg-surface: #0e0e0e;
-            --bg-elevated: #141414;
+            --bg-card: #121212;
 
             --gold: #d4af37;
             --gold-light: #f4d47a;
@@ -40,7 +40,7 @@
 
             --serif: "Cormorant Garamond", Georgia, serif;
             --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-            --container: 1180px;
+            --container: 1160px;
         }
 
         * {
@@ -81,21 +81,6 @@
             margin-inline: auto;
         }
 
-        .serif {
-            font-family: var(--serif);
-        }
-
-        /* Vector Icon Utility */
-        .svg-icon {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            stroke-width: 0;
-            stroke: currentColor;
-            fill: currentColor;
-            vertical-align: middle;
-        }
-
         /* =========================================================
            TOP ANNOUNCEMENT BAR
         ========================================================= */
@@ -103,7 +88,7 @@
             background: linear-gradient(90deg, #050505, #141109, #050505);
             border-bottom: 1px solid var(--border-hairline);
             text-align: center;
-            padding: 8px 15px;
+            padding: 7px 15px;
             font-size: 11px;
             letter-spacing: 1.2px;
             color: var(--ivory);
@@ -122,14 +107,14 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(7, 7, 7, 0.94);
+            background: rgba(7, 7, 7, 0.95);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-hairline);
         }
 
         .navbar {
-            min-height: 74px;
+            min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -141,7 +126,7 @@
             font-size: 26px;
             font-weight: 700;
             color: var(--gold-light);
-            letter-spacing: 2px;
+            letter-spacing: 1.8px;
             line-height: 1;
         }
 
@@ -157,10 +142,9 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 26px;
             font-size: 12.5px;
             color: #d1ccc2;
-            letter-spacing: 0.5px;
         }
 
         .nav-links a {
@@ -172,28 +156,13 @@
             color: var(--gold-light);
         }
 
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 1px;
-            background: var(--gold);
-            transition: width 0.25s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
         .nav-actions {
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        .nav-wa-link {
+        .nav-wa-contact {
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -204,11 +173,11 @@
             color: var(--whatsapp-text);
             font-size: 11px;
             font-weight: 600;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.5px;
             transition: all 0.25s ease;
         }
 
-        .nav-wa-link:hover {
+        .nav-wa-contact:hover {
             background: #25d366;
             color: #050505;
         }
@@ -264,31 +233,12 @@
             color: #ffffff;
         }
 
-        .btn-wa-order {
-            background: var(--whatsapp-bg);
-            border: 1px solid var(--whatsapp-border);
-            color: var(--whatsapp-text);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .btn-wa-order:hover {
-            background: #153c26;
-            border-color: #25d366;
-            color: #ffffff;
-            transform: translateY(-1px);
-        }
-
         /* =========================================================
-           HERO & IMMEDIATE PURCHASE CONSOLE (ABOVE THE FOLD)
+           HERO & STREAMLINED PURCHASE CONSOLE (ABOVE THE FOLD)
         ========================================================= */
         .hero {
             position: relative;
-            padding: 50px 0 70px;
+            padding: 50px 0 65px;
             background:
                 radial-gradient(circle at 75% 25%, rgba(212, 175, 55, 0.08), transparent 45%),
                 radial-gradient(circle at 20% 75%, rgba(130, 189, 36, 0.04), transparent 50%),
@@ -300,42 +250,42 @@
             display: grid;
             grid-template-columns: 1.05fr 0.95fr;
             align-items: center;
-            gap: 50px;
+            gap: 45px;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             color: var(--green-accent);
             font-size: 10.5px;
             font-weight: 700;
-            letter-spacing: 2.8px;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .eyebrow::before {
             content: "";
-            width: 30px;
+            width: 24px;
             height: 1px;
             background: var(--green-accent);
         }
 
         .hero-title {
             font-family: var(--serif);
-            font-size: clamp(38px, 4.4vw, 60px);
-            line-height: 1;
+            font-size: clamp(36px, 4.2vw, 56px);
+            line-height: 1.02;
             font-weight: 600;
             color: var(--gold-light);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .hero-title span {
             display: block;
-            font-size: clamp(20px, 2.4vw, 32px);
+            font-size: clamp(19px, 2.3vw, 30px);
             color: var(--ivory);
-            margin-top: 6px;
+            margin-top: 4px;
             font-weight: 400;
         }
 
@@ -343,34 +293,33 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             font-size: 12px;
             color: var(--gold-light);
         }
 
         .star-rating-row span {
             color: var(--text-muted);
-            font-size: 11.5px;
-            letter-spacing: 0.3px;
+            font-size: 11px;
         }
 
         .hero-copy {
             color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 22px;
-            max-width: 500px;
+            font-size: 13.5px;
+            line-height: 1.65;
+            margin-bottom: 20px;
+            max-width: 480px;
         }
 
-        /* Purchase Console Card */
+        /* E-Commerce Only Buy Card */
         .instant-buy-card {
             background: rgba(18, 18, 18, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-hairline);
             border-radius: 4px;
-            padding: 22px 24px;
-            max-width: 520px;
+            padding: 20px 22px;
+            max-width: 500px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
         }
 
@@ -378,9 +327,9 @@
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            padding-bottom: 14px;
+            padding-bottom: 12px;
             border-bottom: 1px solid var(--border-subtle);
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .price-meta {
@@ -390,7 +339,7 @@
 
         .current-price {
             font-family: var(--serif);
-            font-size: 38px;
+            font-size: 34px;
             font-weight: 700;
             color: var(--gold-light);
             line-height: 1;
@@ -398,23 +347,22 @@
 
         .price-subtext {
             color: var(--text-faint);
-            font-size: 10.5px;
+            font-size: 10px;
             margin-top: 4px;
-            letter-spacing: 0.3px;
         }
 
         .badge-botanical {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             background: rgba(130, 189, 36, 0.12);
             color: var(--green-accent);
             border: 1px solid rgba(130, 189, 36, 0.3);
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 2px;
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
         }
 
@@ -422,11 +370,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .qty-label {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--ivory);
             font-weight: 500;
         }
@@ -466,50 +414,60 @@
 
         .cta-action-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 10px;
         }
 
-        .trust-micro-badges {
+        /* Subtle WhatsApp Contact Helper Line */
+        .wa-contact-helper {
             display: flex;
-            justify-content: space-between;
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
             margin-top: 14px;
             padding-top: 12px;
             border-top: 1px solid var(--border-subtle);
-            font-size: 10.5px;
+            font-size: 11.5px;
             color: var(--text-muted);
         }
 
-        .trust-micro-badges span {
+        .wa-contact-helper a {
+            color: var(--whatsapp-text);
+            font-weight: 600;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
+            transition: color 0.2s;
         }
 
-        /* Product Showcase Visual */
+        .wa-contact-helper a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Product Image Showcase */
         .hero-product-display {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 480px;
+            min-height: 460px;
         }
 
         .hero-orbit-glow {
             position: absolute;
-            width: 420px;
-            height: 420px;
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
             border: 1px solid var(--border-hairline);
-            box-shadow: 0 0 100px rgba(212, 175, 55, 0.06);
+            box-shadow: 0 0 90px rgba(212, 175, 55, 0.06);
         }
 
         .hero-product-img {
             position: relative;
             z-index: 2;
-            width: min(100%, 460px);
-            max-height: 460px;
+            width: min(100%, 440px);
+            max-height: 440px;
             object-fit: contain;
             filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.9));
             transition: transform 0.4s ease;
@@ -520,7 +478,7 @@
         }
 
         /* =========================================================
-           TRUST STRIP (HAIRLINE MINIMALIST)
+           TRUST STRIP (COMPACT HAIRLINE)
         ========================================================= */
         .trust-strip {
             border-top: 1px solid var(--border-hairline);
@@ -534,10 +492,10 @@
         }
 
         .trust-item {
-            padding: 22px 18px;
+            padding: 18px 16px;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             border-right: 1px solid var(--border-hairline);
         }
 
@@ -546,8 +504,8 @@
         }
 
         .trust-icon-box {
-            width: 38px;
-            height: 38px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             border: 1px solid var(--border-hairline);
             display: flex;
@@ -561,7 +519,7 @@
         .trust-item strong {
             display: block;
             color: var(--ivory);
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 600;
         }
 
@@ -569,47 +527,47 @@
             display: block;
             color: var(--text-muted);
             font-size: 10px;
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
         /* =========================================================
-           EDITORIAL "WHY" SECTION (NO REPETITIVE BOXES)
+           EDITORIAL "WHY" SECTION
         ========================================================= */
         section {
-            padding: 90px 0;
+            padding: 80px 0;
         }
 
         .section-label {
             color: var(--green-accent);
-            font-size: 10.5px;
+            font-size: 10px;
             font-weight: 700;
-            letter-spacing: 2.8px;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .section-title {
             font-family: var(--serif);
-            font-size: clamp(36px, 4vw, 56px);
-            line-height: 1;
+            font-size: clamp(32px, 3.8vw, 50px);
+            line-height: 1.05;
             font-weight: 600;
             color: var(--gold-light);
         }
 
         .section-subtitle {
             color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.8;
-            max-width: 640px;
-            margin-top: 14px;
+            font-size: 13.5px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-top: 12px;
         }
 
         .why-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            gap: 40px;
-            margin-bottom: 45px;
+            gap: 35px;
+            margin-bottom: 40px;
         }
 
         .editorial-benefit-grid {
@@ -620,7 +578,7 @@
         }
 
         .benefit-col {
-            padding: 35px 24px;
+            padding: 30px 20px;
             border-right: 1px solid var(--border-hairline);
             transition: background 0.3s ease;
         }
@@ -635,27 +593,27 @@
 
         .benefit-num {
             font-family: var(--serif);
-            font-size: 32px;
+            font-size: 28px;
             color: var(--gold-muted);
             line-height: 1;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .benefit-col h3 {
             font-family: var(--serif);
-            font-size: 22px;
+            font-size: 20px;
             color: var(--ivory);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .benefit-col p {
             color: var(--text-muted);
-            font-size: 12.5px;
-            line-height: 1.7;
+            font-size: 12px;
+            line-height: 1.6;
         }
 
         /* =========================================================
-           BOTANICAL INGREDIENTS (TYPOGRAPHY & MINIMAL GLYPHS)
+           BOTANICAL INGREDIENTS
         ========================================================= */
         .ingredients {
             background: linear-gradient(180deg, #090909, #050505);
@@ -663,7 +621,7 @@
 
         .ingredients-heading {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .ingredients-heading .section-subtitle {
@@ -673,14 +631,14 @@
         .ingredient-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 14px;
+            gap: 12px;
         }
 
         .ingredient-card {
             background: #0b0b0b;
             border: 1px solid var(--border-subtle);
             border-radius: 2px;
-            padding: 26px 14px;
+            padding: 22px 10px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -690,13 +648,13 @@
 
         .ingredient-card:hover {
             border-color: var(--gold-muted);
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             background: #111111;
         }
 
         .ingredient-glyph-wrap {
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             background: rgba(130, 189, 36, 0.06);
             border: 1px solid rgba(130, 189, 36, 0.2);
@@ -704,12 +662,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .ingredient-card h3 {
             font-family: var(--serif);
-            font-size: 20px;
+            font-size: 18px;
             color: var(--gold-light);
             line-height: 1.1;
         }
@@ -717,22 +675,22 @@
         .ingredient-latin {
             font-family: var(--serif);
             font-style: italic;
-            font-size: 11px;
+            font-size: 10.5px;
             color: var(--gold-muted);
-            margin: 4px 0 6px;
+            margin: 3px 0 5px;
         }
 
         .ingredient-card p {
-            font-size: 10.5px;
+            font-size: 10px;
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
         .botanical-footer-note {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 30px;
             color: var(--text-faint);
-            font-size: 11.5px;
+            font-size: 11px;
         }
 
         /* =========================================================
@@ -744,20 +702,20 @@
 
         .how-heading {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 45px;
         }
 
         .steps-container {
             position: relative;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 16px;
         }
 
         .steps-container::before {
             content: "";
             position: absolute;
-            top: 36px;
+            top: 32px;
             left: 12%;
             right: 12%;
             height: 1px;
@@ -772,8 +730,8 @@
         }
 
         .step-circle {
-            width: 72px;
-            height: 72px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             margin-inline: auto;
             display: flex;
@@ -783,23 +741,23 @@
             background: #090909;
             color: var(--gold-light);
             font-family: var(--serif);
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
         }
 
         .step-item h3 {
             font-family: var(--serif);
-            font-size: 24px;
+            font-size: 22px;
             color: var(--ivory);
-            margin-top: 18px;
+            margin-top: 14px;
         }
 
         .step-item p {
             color: var(--text-muted);
-            font-size: 12px;
-            line-height: 1.7;
-            max-width: 220px;
-            margin: 6px auto 0;
+            font-size: 11.5px;
+            line-height: 1.6;
+            max-width: 200px;
+            margin: 4px auto 0;
         }
 
         /* =========================================================
@@ -814,53 +772,51 @@
         .story-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
             align-items: center;
         }
 
-        /* Professional Emblem / Certification Badge Display */
         .story-emblem-card {
             border: 1px solid var(--border-hairline);
             background: linear-gradient(145deg, #101010, #090909);
-            padding: 45px 35px;
+            padding: 35px 28px;
             border-radius: 4px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .emblem-icon {
-            width: 68px;
-            height: 68px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
             border: 1px solid var(--gold);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             color: var(--gold-light);
-            margin-bottom: 18px;
+            margin-bottom: 14px;
             background: rgba(212, 175, 55, 0.05);
         }
 
         .emblem-title {
             font-family: var(--serif);
-            font-size: 26px;
+            font-size: 24px;
             color: var(--ivory);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .emblem-sub {
-            font-size: 11px;
+            font-size: 10.5px;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--gold-light);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .emblem-specs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            padding-top: 20px;
+            gap: 12px;
+            padding-top: 16px;
             border-top: 1px solid var(--border-subtle);
             text-align: left;
         }
@@ -868,45 +824,45 @@
         .spec-item small {
             display: block;
             color: var(--text-faint);
-            font-size: 9.5px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.6px;
         }
 
         .spec-item strong {
             display: block;
             color: var(--ivory);
-            font-size: 12px;
+            font-size: 11.5px;
             margin-top: 2px;
         }
 
         .story-content h2 {
             font-family: var(--serif);
-            font-size: clamp(34px, 3.8vw, 52px);
+            font-size: clamp(32px, 3.6vw, 48px);
             line-height: 1.05;
             color: var(--gold-light);
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .story-content p {
             color: var(--text-muted);
-            font-size: 13.5px;
-            line-height: 1.85;
-            margin-bottom: 16px;
+            font-size: 13px;
+            line-height: 1.75;
+            margin-bottom: 14px;
         }
 
         .story-feature-list {
             list-style: none;
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         .story-feature-list li {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 12.5px;
+            gap: 8px;
+            font-size: 12px;
             color: var(--ivory);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .story-feature-list li svg {
@@ -923,47 +879,47 @@
 
         .reviews-heading {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .review-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            gap: 16px;
         }
 
         .review-card {
             background: #0c0c0c;
             border: 1px solid var(--border-hairline);
             border-radius: 3px;
-            padding: 28px 24px;
+            padding: 24px 20px;
         }
 
         .review-stars {
             color: var(--gold-light);
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             display: flex;
             gap: 3px;
         }
 
         .review-card p {
             color: #b3ada3;
-            font-size: 12.5px;
-            line-height: 1.75;
-            margin-bottom: 20px;
+            font-size: 12px;
+            line-height: 1.65;
+            margin-bottom: 16px;
         }
 
         .review-user-row {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             border-top: 1px solid var(--border-subtle);
-            padding-top: 14px;
+            padding-top: 12px;
         }
 
         .avatar-initial {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: #181818;
             border: 1px solid var(--border-hairline);
@@ -972,29 +928,28 @@
             align-items: center;
             justify-content: center;
             font-family: var(--serif);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
         }
 
         .user-meta strong {
             display: block;
             color: var(--ivory);
-            font-size: 12px;
+            font-size: 11.5px;
         }
 
         .user-meta small {
             display: block;
             color: var(--green-accent);
             font-size: 9.5px;
-            letter-spacing: 0.3px;
         }
 
         /* =========================================================
            FAQ ACCORDION
         ========================================================= */
         .faq-wrap {
-            max-width: 820px;
-            margin: 40px auto 0;
+            max-width: 800px;
+            margin: 35px auto 0;
         }
 
         details {
@@ -1004,13 +959,13 @@
         summary {
             list-style: none;
             cursor: pointer;
-            padding: 20px 4px;
+            padding: 18px 4px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             color: var(--ivory);
             font-family: var(--serif);
-            font-size: 21px;
+            font-size: 20px;
             transition: color 0.2s;
         }
 
@@ -1035,16 +990,16 @@
 
         details p {
             color: var(--text-muted);
-            font-size: 13px;
-            line-height: 1.8;
-            padding: 0 25px 20px 4px;
+            font-size: 12.5px;
+            line-height: 1.75;
+            padding: 0 20px 18px 4px;
         }
 
         /* =========================================================
            FOOTER
         ========================================================= */
         footer {
-            padding: 65px 0 85px;
+            padding: 55px 0 75px;
             border-top: 1px solid var(--border-hairline);
             background: #040404;
         }
@@ -1052,23 +1007,23 @@
         .footer-grid {
             display: grid;
             grid-template-columns: 1.4fr 1fr 1fr 1fr;
-            gap: 40px;
+            gap: 35px;
         }
 
         .footer-brand p {
-            max-width: 300px;
-            margin-top: 15px;
+            max-width: 280px;
+            margin-top: 12px;
             color: var(--text-muted);
-            font-size: 12px;
-            line-height: 1.8;
+            font-size: 11.5px;
+            line-height: 1.7;
         }
 
         .footer-col h4 {
-            font-size: 11px;
+            font-size: 10.5px;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gold-light);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .footer-col ul {
@@ -1076,12 +1031,12 @@
         }
 
         .footer-col li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .footer-col li a {
             color: var(--text-muted);
-            font-size: 12px;
+            font-size: 11.5px;
             transition: color 0.25s;
         }
 
@@ -1094,8 +1049,8 @@
             align-items: center;
             gap: 8px;
             color: var(--text-muted);
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 11.5px;
+            margin-bottom: 8px;
         }
 
         .footer-contact-item a:hover {
@@ -1103,15 +1058,15 @@
         }
 
         .footer-bottom {
-            margin-top: 50px;
-            padding-top: 20px;
+            margin-top: 45px;
+            padding-top: 18px;
             border-top: 1px solid var(--border-subtle);
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
             color: var(--text-faint);
-            font-size: 10px;
+            font-size: 9.5px;
         }
 
         /* =========================================================
@@ -1126,16 +1081,16 @@
             z-index: 9999;
             background: rgba(10, 10, 10, 0.98);
             border-top: 1px solid var(--border-hairline);
-            padding: 9px 12px;
+            padding: 8px 12px;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 8px;
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
         }
 
         .mobile-floating-bar .bar-price {
             font-family: var(--serif);
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--gold-light);
             line-height: 1;
@@ -1148,9 +1103,9 @@
         }
 
         .mobile-floating-bar .btn {
-            min-height: 40px;
-            padding: 0 10px;
-            font-size: 10.5px;
+            min-height: 38px;
+            padding: 0 8px;
+            font-size: 10px;
             flex: 1;
         }
 
@@ -1158,8 +1113,8 @@
             background: var(--whatsapp-bg);
             border: 1px solid var(--whatsapp-border);
             color: var(--whatsapp-text);
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 3px;
             display: flex;
             align-items: center;
@@ -1168,7 +1123,7 @@
         }
 
         /* =========================================================
-           RESPONSIVE ADAPTATIONS
+           RESPONSIVE & MOBILE TEXT REFINEMENTS
         ========================================================= */
         @media (max-width: 1000px) {
             .nav-links {
@@ -1176,11 +1131,12 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 74px;
-                padding: 25px;
+                top: 72px;
+                padding: 22px;
                 flex-direction: column;
                 background: #090909;
                 border-bottom: 1px solid var(--border-hairline);
+                gap: 18px;
             }
 
             .nav-links.active {
@@ -1193,12 +1149,12 @@
 
             .hero-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
             }
 
             .hero-product-display {
                 order: -1;
-                min-height: 380px;
+                min-height: 340px;
             }
 
             .editorial-benefit-grid {
@@ -1220,7 +1176,7 @@
 
             .story-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 35px;
             }
 
             .review-grid {
@@ -1233,33 +1189,73 @@
         }
 
         @media (max-width: 650px) {
+            section {
+                padding: 55px 0;
+            }
+
+            .announcement {
+                font-size: 9.5px;
+                padding: 6px 10px;
+                letter-spacing: 0.8px;
+            }
+
+            /* Compact Mobile Hero (Zero Vertical Overflow) */
             .hero {
-                padding: 35px 0 50px;
+                padding: 25px 0 45px;
             }
 
             .hero-title {
-                font-size: 34px;
+                font-size: 28px;
             }
 
             .hero-title span {
-                font-size: 18px;
+                font-size: 16px;
+                margin-top: 2px;
+            }
+
+            .hero-copy {
+                font-size: 12.5px;
+                line-height: 1.6;
+                margin-bottom: 16px;
             }
 
             .hero-product-display {
-                min-height: 290px;
+                min-height: 220px;
             }
 
             .hero-orbit-glow {
-                width: 270px;
-                height: 270px;
+                width: 220px;
+                height: 220px;
             }
 
             .hero-product-img {
-                max-height: 280px;
+                max-height: 220px;
             }
 
+            .instant-buy-card {
+                padding: 16px 14px;
+            }
+
+            .current-price {
+                font-size: 28px;
+            }
+
+            /* Compact 2x2 Trust Strip */
             .trust-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-item {
+                padding: 12px 10px;
+                gap: 8px;
+            }
+
+            .trust-item strong {
+                font-size: 11px;
+            }
+
+            .trust-item small {
+                display: none; /* Hide verbose secondary text on mobile */
             }
 
             .trust-item:nth-child(2) {
@@ -1271,8 +1267,10 @@
                 border-bottom: 1px solid var(--border-hairline);
             }
 
+            /* Streamlined Why & Ritual */
             .why-header {
                 display: block;
+                margin-bottom: 25px;
             }
 
             .editorial-benefit-grid {
@@ -1280,38 +1278,96 @@
             }
 
             .benefit-col {
+                padding: 18px 4px;
                 border-right: none;
                 border-bottom: 1px solid var(--border-hairline);
             }
 
+            .benefit-col h3 {
+                font-size: 18px;
+            }
+
+            .benefit-num {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+
+            /* Clean 3x2 Ingredient Grid without horizontal dragging */
             .ingredient-grid {
-                display: flex;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                padding-bottom: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
             }
 
             .ingredient-card {
-                min-width: 155px;
-                scroll-snap-align: start;
+                padding: 14px 6px;
+            }
+
+            .ingredient-glyph-wrap {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 8px;
+            }
+
+            .ingredient-glyph-wrap svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .ingredient-card h3 {
+                font-size: 15px;
+            }
+
+            .ingredient-latin {
+                font-size: 9px;
+            }
+
+            .ingredient-card p {
+                display: none; /* Keep mobile ingredient cards clean & tight */
             }
 
             .steps-container {
                 grid-template-columns: 1fr 1fr;
-                gap: 30px 15px;
+                gap: 20px 10px;
             }
 
             .steps-container::before {
                 display: none;
             }
 
+            .step-circle {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+            }
+
+            .step-item h3 {
+                font-size: 18px;
+                margin-top: 8px;
+            }
+
+            /* Compact Story Emblem */
+            .story-emblem-card {
+                padding: 24px 16px;
+            }
+
+            .emblem-title {
+                font-size: 20px;
+            }
+
+            .emblem-specs {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
             }
 
             .footer-bottom {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 8px;
             }
 
             .mobile-floating-bar {
@@ -1319,7 +1375,7 @@
             }
 
             body {
-                padding-bottom: 60px;
+                padding-bottom: 55px;
             }
         }
     </style>
@@ -1332,7 +1388,7 @@
 ============================================================ -->
 <div class="announcement">
     <strong>Best Herbal</strong> &nbsp;•&nbsp; Botanical Hair Colouring System &nbsp;•&nbsp; 
-    <span>Direct WhatsApp Orders: +91 96002 25546</span>
+    <span>Tiruchendur, Tamil Nadu</span>
 </div>
 
 <!-- ============================================================
@@ -1355,16 +1411,16 @@
         </nav>
 
         <div class="nav-actions">
-            <!-- Sleek WhatsApp Navigation Trigger -->
-            <a href="https://wa.me/919600225546?text=Hello%20Best%20Herbal%2C%20I%20would%20like%20to%20order%20the%20Black%20Herbal%20Hair%20Dye." 
+            <!-- Dedicated WhatsApp Contact Link -->
+            <a href="https://wa.me/919600225546?text=Hello%20Best%20Herbal%2C%20I%20have%20an%20inquiry%20regarding%20your%20Black%20Herbal%20Hair%20Dye." 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="nav-wa-link">
-                <!-- WhatsApp SVG -->
+               class="nav-wa-contact"
+               aria-label="Contact Customer Care on WhatsApp">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
                 </svg>
-                <span>WhatsApp Order</span>
+                <span>WhatsApp Contact</span>
             </a>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
@@ -1385,7 +1441,7 @@
         <!-- Purchase & Product Copy -->
         <div class="hero-content">
             <div class="eyebrow">
-                Traditional Botanical Formulation
+                Botanical Hair Care
             </div>
 
             <h1 class="hero-title">
@@ -1393,30 +1449,28 @@
                 <span>A Herbal Way To Colour Grey Hair</span>
             </h1>
 
-            <!-- Vector Star Rating -->
             <div class="star-rating-row">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span>4.9 / 5 • Pure Powder + Herbal Liquid System</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>4.9 / 5 • Powder + Liquid Formulation</span>
             </div>
 
             <p class="hero-copy">
-                Discover an authentic, chemical-conscious colouring ritual. Blending micro-milled botanical powders with revitalizing herbal liquid for durable grey hair coverage without synthetic harshness.
+                Two-part botanical hair colouring system blending micro-milled herbal powders with activating herbal liquid for rich grey hair coverage without synthetic chemicals.
             </p>
 
-            <!-- Consolidated Instant Purchase Console -->
+            <!-- Consolidated Pure E-Commerce Buy Card -->
             <div class="instant-buy-card" id="buyCard">
                 <div class="price-row">
                     <div class="price-meta">
                         <span class="current-price" id="displayPrice">₹XXX</span>
-                        <span class="price-subtext">Inclusive of all taxes • Ready for immediate dispatch</span>
+                        <span class="price-subtext">Inclusive of all taxes • Ready for dispatch</span>
                     </div>
                     <span class="badge-botanical">
-                        <!-- Hairline Leaf SVG -->
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                         100% Herbal
                     </span>
                 </div>
@@ -1431,7 +1485,7 @@
                     </div>
                 </div>
 
-                <!-- Action Buttons: Buy Now & Add to Cart -->
+                <!-- Direct Checkout CTAs -->
                 <div class="cta-action-grid">
                     <button class="btn btn-primary" onclick="proceedToBuy()">
                         BUY NOW →
@@ -1441,40 +1495,22 @@
                     </button>
                 </div>
 
-                <!-- Integrated Elegant WhatsApp Button -->
-                <a href="#" 
-                   id="whatsappOrderBtn" 
-                   onclick="orderViaWhatsApp(event)" 
-                   class="btn btn-wa-order">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                    </svg>
-                    <span>Direct WhatsApp Order (+91 96002 25546)</span>
-                </a>
-
-                <!-- Micro Trust Indicators -->
-                <div class="trust-micro-badges">
-                    <span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                        Secure Ordering
-                    </span>
-                    <span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                        Direct Dispatch
-                    </span>
-                    <span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        Gentle Formula
-                    </span>
+                <!-- WhatsApp for Contact & Questions Only -->
+                <div class="wa-contact-helper">
+                    <span>Questions about the product?</span>
+                    <a href="https://wa.me/919600225546?text=Hi%20Best%20Herbal%20team%2C%20I%20have%20a%20few%20questions%20about%20your%20hair%20dye." target="_blank" rel="noopener noreferrer">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Chat with Us
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Clean Product Visual Showcase -->
+        <!-- Product Image Showcase -->
         <div class="hero-product-display">
             <div class="hero-orbit-glow"></div>
             <img src="FRONT.png" 
-                 alt="Best Herbal Black Herbal Hair Dye - Packaging & Bottle" 
+                 alt="Best Herbal Black Herbal Hair Dye - Box & Bottle" 
                  class="hero-product-img"
                  onerror="this.onerror=null; this.src='FRONT.jpg.jpeg';">
         </div>
@@ -1489,58 +1525,58 @@
     <div class="container trust-grid">
         <div class="trust-item">
             <div class="trust-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
             </div>
             <div>
-                <strong>Botanical Heritage</strong>
-                <small>Select indigenous herbs</small>
+                <strong>Botanical Blend</strong>
+                <small>Select herbs</small>
             </div>
         </div>
 
         <div class="trust-item">
             <div class="trust-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.43 22h11.14a2 2 0 0 0 1.74-2.7L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.43 22h11.14a2 2 0 0 0 1.74-2.7L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/></svg>
             </div>
             <div>
-                <strong>Two-Part System</strong>
-                <small>Powder + activating liquid</small>
+                <strong>2-Part System</strong>
+                <small>Powder + liquid</small>
             </div>
         </div>
 
         <div class="trust-item">
             <div class="trust-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div>
-                <strong>Grey Hair Focus</strong>
-                <small>Deep, organic black tint</small>
+                <strong>Grey Coverage</strong>
+                <small>Deep dark shade</small>
             </div>
         </div>
 
         <div class="trust-item">
             <div class="trust-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-                <strong>Straightforward Ritual</strong>
-                <small>Mix • Apply • Rinse clean</small>
+                <strong>Gentle Ritual</strong>
+                <small>Easy DIY application</small>
             </div>
         </div>
     </div>
 </div>
 
 <!-- ============================================================
-     THE BEST HERBAL DIFFERENCE (EDITORIAL LAYOUT)
+     THE BEST HERBAL DIFFERENCE
 ============================================================ -->
 <section class="why" id="why">
     <div class="container">
         <div class="why-header">
             <div>
-                <div class="section-label">THE BEST HERBAL DIFFERENCE</div>
+                <div class="section-label">THE DIFFERENCE</div>
                 <h2 class="section-title">Where Nature Meets<br>Modern Hair Care.</h2>
             </div>
             <p class="section-subtitle">
-                Designed for those transitioning away from synthetic harshness. Our balanced two-part mechanism activates natural plant pigments right at the moment of use.
+                A conscious transition away from harsh synthetic ammonia dyes. Activating plant pigments right at the time of use ensures fresh, vibrant conditioning.
             </p>
         </div>
 
@@ -1548,25 +1584,25 @@
             <div class="benefit-col">
                 <div class="benefit-num">01</div>
                 <h3>Botanical Integrity</h3>
-                <p>Pure herbal powders and nourishing plant extracts sourced to protect hair fiber resilience.</p>
+                <p>Pure herbal powders and nourishing plant extracts that condition strands while colouring.</p>
             </div>
 
             <div class="benefit-col">
                 <div class="benefit-num">02</div>
                 <h3>Grey Hair Focus</h3>
-                <p>Engineered specifically to adhere to resistant grey strands, producing a rich, natural shade.</p>
+                <p>Formulated specifically to adhere to coarse grey hair, producing a rich, natural shade.</p>
             </div>
 
             <div class="benefit-col">
                 <div class="benefit-num">03</div>
                 <h3>Two-Part Potency</h3>
-                <p>Powder and liquid stay fresh separately until mixed, preserving active herbal conditioning.</p>
+                <p>Herbal powder and liquid remain sealed until mixing, ensuring optimal freshness.</p>
             </div>
 
             <div class="benefit-col">
                 <div class="benefit-num">04</div>
                 <h3>Clean DIY Ritual</h3>
-                <p>Smooth paste application with no pungent odor; rinses out thoroughly with plain water.</p>
+                <p>Smooth, drip-free application with no pungent odor that rinses clear with water.</p>
             </div>
         </div>
     </div>
@@ -1581,68 +1617,68 @@
             <div class="section-label">SELECT BOTANICALS</div>
             <h2 class="section-title">Powered By Traditional Herbs</h2>
             <p class="section-subtitle">
-                Six foundational botanicals revered across South Indian traditional hair care practices.
+                Classical herbs revered across traditional South Indian scalp and hair care routines.
             </p>
         </div>
 
         <div class="ingredient-grid">
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
                 </div>
                 <h3>Henna</h3>
                 <div class="ingredient-latin">Lawsonia inermis</div>
-                <p>Strengthens the cuticle and conditions</p>
+                <p>Conditioning & cuticle coating</p>
             </div>
 
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-9"/><path d="M9 15c-3 0-5-2-5-5a7 7 0 0 1 14 0c0 3-2 5-5 5"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-9"/><path d="M9 15c-3 0-5-2-5-5a7 7 0 0 1 14 0c0 3-2 5-5 5"/></svg>
                 </div>
                 <h3>Indigo</h3>
                 <div class="ingredient-latin">Indigofera tinctoria</div>
-                <p>Supplies authentic, deep dark tones</p>
+                <p>Deep dark natural pigment</p>
             </div>
 
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a9 9 0 0 0-9 9c0 4 3 8 9 11 6-3 9-7 9-11a9 9 0 0 0-9-9z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a9 9 0 0 0-9 9c0 4 3 8 9 11 6-3 9-7 9-11a9 9 0 0 0-9-9z"/></svg>
                 </div>
                 <h3>Aloe Vera</h3>
                 <div class="ingredient-latin">Aloe barbadensis</div>
-                <p>Deep scalp hydration and soothing</p>
+                <p>Hydration & scalp comfort</p>
             </div>
 
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3m0 12v3M3 12h3m12 0h3"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3m0 12v3M3 12h3m12 0h3"/></svg>
                 </div>
                 <h3>Hibiscus</h3>
                 <div class="ingredient-latin">Hibiscus rosa-sinensis</div>
-                <p>Nourishes hair roots and maintains softness</p>
+                <p>Root health & strand gloss</p>
             </div>
 
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16"/></svg>
                 </div>
                 <h3>Amla</h3>
                 <div class="ingredient-latin">Phyllanthus emblica</div>
-                <p>Antioxidant richness for follicle vitality</p>
+                <p>Nutrient & antioxidant support</p>
             </div>
 
             <div class="ingredient-card">
                 <div class="ingredient-glyph-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
                 <h3>Rosemary</h3>
                 <div class="ingredient-latin">Rosmarinus officinalis</div>
-                <p>Stimulates scalp micro-circulation</p>
+                <p>Scalp invigorating extract</p>
             </div>
         </div>
 
         <p class="botanical-footer-note">
-            Also enriched with Eclipta alba (Bhringraj), Noni, Cassia obovata, Chamomile, Murraya koenigii (Curry leaves), Jatamansi, Brahmi, Neem, and Fenugreek.
+            Also enriched with Bhringraj, Noni, Cassia obovata, Chamomile, Curry leaves, Jatamansi, Brahmi, Neem, and Fenugreek.
         </p>
     </div>
 </section>
@@ -1656,7 +1692,7 @@
             <div class="section-label">APPLICATION METHOD</div>
             <h2 class="section-title">The Four-Step Ritual</h2>
             <p class="section-subtitle" style="margin-inline:auto;">
-                A clean, straightforward process utilizing the included herbal powder and activating liquid.
+                Convenient and clean application using the supplied herbal powder and botanical liquid.
             </p>
         </div>
 
@@ -1664,25 +1700,25 @@
             <div class="step-item">
                 <div class="step-circle">01</div>
                 <h3>Mix</h3>
-                <p>Blend the herbal powder and liquid in a glass or ceramic bowl into a smooth paste.</p>
+                <p>Blend the powder and liquid into a smooth paste.</p>
             </div>
 
             <div class="step-item">
                 <div class="step-circle">02</div>
                 <h3>Apply</h3>
-                <p>Apply evenly across damp or clean hair, paying special attention to grey roots.</p>
+                <p>Spread evenly, concentrating on grey hair roots.</p>
             </div>
 
             <div class="step-item">
                 <div class="step-circle">03</div>
                 <h3>Rest</h3>
-                <p>Allow the botanical elements to bond for the duration stated in the guide.</p>
+                <p>Allow the botanicals to bond for the advised duration.</p>
             </div>
 
             <div class="step-item">
                 <div class="step-circle">04</div>
                 <h3>Rinse</h3>
-                <p>Rinse thoroughly with lukewarm or cool water until the runoff is clear.</p>
+                <p>Rinse cleanly with plain water until runoff is clear.</p>
             </div>
         </div>
     </div>
@@ -1694,29 +1730,29 @@
 <section class="story" id="story">
     <div class="container story-grid">
 
-        <!-- Heritage Emblem Card (Replaces the empty circle) -->
+        <!-- Heritage Emblem Card -->
         <div class="story-emblem-card">
             <div class="emblem-icon">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
             <h3 class="emblem-title">Best Herbal</h3>
             <div class="emblem-sub">Tiruchendur • Tamil Nadu</div>
 
             <div class="emblem-specs">
                 <div class="spec-item">
-                    <small>Manufacturing Hub</small>
+                    <small>Manufacturer</small>
                     <strong>Herbo Flora Bio Tech</strong>
                 </div>
                 <div class="spec-item">
-                    <small>Marketing Base</small>
+                    <small>Marketed By</small>
                     <strong>Best Herbal, Tiruchendur</strong>
                 </div>
                 <div class="spec-item">
-                    <small>Formulation</small>
+                    <small>Format</small>
                     <strong>Powder + Liquid (2-Part)</strong>
                 </div>
                 <div class="spec-item">
-                    <small>Target Focus</small>
+                    <small>Application</small>
                     <strong>Grey Hair Coverage</strong>
                 </div>
             </div>
@@ -1728,29 +1764,25 @@
             <h2>Where Nature<br>Meets Excellence.</h2>
 
             <p>
-                Best Herbal is rooted in <strong>Tiruchendur, Tamil Nadu</strong>, dedicated to delivering honest, plant-based hair care solutions that honour regional botanical heritage.
+                Best Herbal is rooted in <strong>Tiruchendur, Tamil Nadu</strong>, dedicated to delivering honest, plant-based hair care solutions that honour regional botanical heritage[cite: 1, 2].
             </p>
 
             <p>
-                Our Black Herbal Hair Dye eliminates chemical irritation through an innovative two-part delivery system—marrying micro-powdered botanicals with active liquid botanicals right before application.
+                Our Black Herbal Hair Dye avoids scalp irritation through an innovative two-part delivery system—marrying micro-powdered botanicals with active liquid botanicals right before application.
             </p>
 
             <ul class="story-feature-list">
                 <li>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                     Pure indigenous botanicals selected for hair strength
                 </li>
                 <li>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                     Convenient powder + herbal liquid combination
                 </li>
                 <li>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    Formulated specifically for resistant grey coverage
-                </li>
-                <li>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    Proudly marketed from Tiruchendur, Tamil Nadu
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Marketed from Tiruchendur, Tamil Nadu[cite: 1, 2]
                 </li>
             </ul>
         </div>
@@ -1764,7 +1796,7 @@
 <section class="reviews">
     <div class="container">
         <div class="reviews-heading">
-            <div class="section-label">CUSTOMER EXPERIENCES</div>
+            <div class="section-label">TESTIMONIALS</div>
             <h2 class="section-title">Tested & Trusted</h2>
             <p class="section-subtitle" style="margin-inline:auto;">
                 Real experiences from users who have embraced our gentle colouring method.
@@ -1774,13 +1806,13 @@
         <div class="review-grid">
             <div class="review-card">
                 <div class="review-stars">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
-                <p>"Very easy to prepare at home. The coverage on my grey patches looks completely natural without staining the forehead."</p>
+                <p>"Very easy to prepare at home. The coverage looks completely natural without staining the forehead."</p>
                 <div class="review-user-row">
                     <div class="avatar-initial">K</div>
                     <div class="user-meta">
@@ -1792,13 +1824,13 @@
 
             <div class="review-card">
                 <div class="review-stars">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
-                <p>"The botanical liquid addition makes a genuine difference compared to conventional dry powder mixes. No harsh chemical smell."</p>
+                <p>"The botanical liquid addition makes a genuine difference compared to conventional dry powder mixes. No ammonia smell."</p>
                 <div class="review-user-row">
                     <div class="avatar-initial">M</div>
                     <div class="user-meta">
@@ -1810,13 +1842,13 @@
 
             <div class="review-card">
                 <div class="review-stars">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#f4d47a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
-                <p>"Ordered conveniently through WhatsApp and got timely delivery to Coimbatore. Good hair volume and color retention."</p>
+                <p>"Customer support answered all my ingredient questions on WhatsApp promptly. Good hair texture after rinsing."</p>
                 <div class="review-user-row">
                     <div class="avatar-initial">S</div>
                     <div class="user-meta">
@@ -1845,15 +1877,15 @@
                     What comes inside the package?
                     <span class="summary-glyph">+</span>
                 </summary>
-                <p>Each unit contains our micro-milled botanical powder sachet paired with the activating herbal liquid bottle, complete with an instruction leaflet for home application.</p>
+                <p>Each unit contains our micro-milled botanical powder sachet paired with the activating herbal liquid bottle and home application guide.</p>
             </details>
 
             <details>
                 <summary>
-                    How do I order directly through WhatsApp?
+                    How do I contact customer support?
                     <span class="summary-glyph">+</span>
                 </summary>
-                <p>Simply click the "Direct WhatsApp Order" button in the hero console. A WhatsApp chat with our official team (+91 96002 25546) will open with your chosen quantity automatically pre-filled.</p>
+                <p>You can chat directly with our customer care team on WhatsApp at <strong>+91 96002 25546</strong>[cite: 1] or use the contact links in the header and footer.</p>
             </details>
 
             <details>
@@ -1861,7 +1893,7 @@
                     Is this formulated specifically for grey hair?
                     <span class="summary-glyph">+</span>
                 </summary>
-                <p>Yes. The plant dye ratio is balanced specifically to adhere to coarse and resistant grey strands, giving an organic deep black tint without artificial hues.</p>
+                <p>Yes. The plant dye ratio is balanced specifically to adhere to coarse grey strands, giving an organic deep black tint without artificial hues.</p>
             </details>
 
             <details>
@@ -1869,7 +1901,7 @@
                     Where is Best Herbal manufactured and marketed?
                     <span class="summary-glyph">+</span>
                 </summary>
-                <p>The product is manufactured under strict quality standards by Herbo Flora Bio Tech and marketed by Best Herbal, located in <strong>Tiruchendur, Tamil Nadu</strong>.</p>
+                <p>The product is manufactured by Herbo Flora Bio Tech and marketed by Best Herbal, located in <strong>Tiruchendur, Tamil Nadu</strong>[cite: 1, 2].</p>
             </details>
 
             <details>
@@ -1877,7 +1909,7 @@
                     What botanical ingredients are included?
                     <span class="summary-glyph">+</span>
                 </summary>
-                <p>The formulation contains Henna, Indigo, Eclipta alba (Bhringraj), Noni, Cassia obovata, Chamomile, Aloe vera, Amla, Hibiscus, Curry leaves, Jatamansi, Rosemary, Brahmi, Neem, and Fenugreek.</p>
+                <p>The formulation contains Henna, Indigo, Bhringraj, Noni, Cassia obovata, Chamomile, Aloe vera, Amla, Hibiscus, Curry leaves, Jatamansi, Rosemary, Brahmi, Neem, and Fenugreek.</p>
             </details>
         </div>
     </div>
@@ -1898,7 +1930,7 @@
                     <small>WHERE NATURE MEETS EXCELLENCE</small>
                 </div>
                 <p>
-                    Botanical hair colouring formulations marketed by Best Herbal, Tiruchendur, Tamil Nadu. Dedicated to natural, chemical-conscious beauty.
+                    Botanical hair colouring formulations marketed by Best Herbal, Tiruchendur, Tamil Nadu[cite: 1, 2]. Dedicated to natural hair health.
                 </p>
             </div>
 
@@ -1907,17 +1939,17 @@
                 <ul>
                     <li><a href="#hero">Shop Product</a></li>
                     <li><a href="#why">Why Best Herbal</a></li>
-                    <li><a href="#ingredients">Select Botanicals</a></li>
+                    <li><a href="#ingredients">Botanicals</a></li>
                     <li><a href="#how">Application Ritual</a></li>
-                    <li><a href="#story">Origin & Promise</a></li>
+                    <li><a href="#story">Origin & Heritage</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Order Direct</h4>
+                <h4>Support</h4>
                 <ul>
-                    <li><a href="#hero">Instant Purchase</a></li>
-                    <li><a href="https://wa.me/919600225546?text=Hi%2C%20I%20would%20like%20to%20order%20Best%20Herbal%20Hair%20Dye." target="_blank" rel="noopener noreferrer">Order via WhatsApp</a></li>
+                    <li><a href="#hero">Buy Online</a></li>
+                    <li><a href="https://wa.me/919600225546?text=Hi%20Best%20Herbal%20team%2C%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
                     <li><a href="#faq">Product FAQs</a></li>
                 </ul>
             </div>
@@ -1925,24 +1957,24 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <div class="footer-contact-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <a href="tel:+919600225546">+91 96002 25546</a>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+919600225546">+91 96002 25546</a>[cite: 1]
                 </div>
                 <div class="footer-contact-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    <a href="https://bestherbalonline.com" target="_blank" rel="noopener noreferrer">BestHerbalOnline.com</a>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <a href="https://bestherbalonline.com" target="_blank" rel="noopener noreferrer">BestHerbalOnline.com</a>[cite: 1]
                 </div>
                 <div class="footer-contact-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Tiruchendur, Tamil Nadu</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Tiruchendur, Tamil Nadu</span>[cite: 2]
                 </div>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-            <span>© 2026 Best Herbal. All rights reserved.</span>
-            <span>Marketed from Tiruchendur, Tamil Nadu • Manufactured by Herbo Flora Bio Tech</span>
+            <span>© 2026 Best Herbal. All rights reserved.</span>[cite: 1]
+            <span>Marketed from Tiruchendur • Manufactured by Herbo Flora Bio Tech</span>[cite: 1, 2]
         </div>
     </div>
 </footer>
@@ -1955,8 +1987,13 @@
     <div class="bar-actions">
         <button class="btn btn-outline" onclick="addToCart()">+ Cart</button>
         <button class="btn btn-primary" onclick="proceedToBuy()">Buy Now</button>
-        <a href="#" onclick="orderViaWhatsApp(event)" class="mobile-wa-icon-btn" aria-label="Order via WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <!-- WhatsApp Support Trigger for Mobile -->
+        <a href="https://wa.me/919600225546?text=Hi%20Best%20Herbal%20team%2C%20I%20have%20an%20inquiry." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="mobile-wa-icon-btn" 
+           aria-label="WhatsApp Contact">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
             </svg>
         </a>
@@ -1964,12 +2001,10 @@
 </div>
 
 <!-- ============================================================
-     CLIENT-SIDE INTERACTIVITY
+     CLIENT-SIDE LOGIC
 ============================================================ -->
 <script>
-    const WHATSAPP_PHONE = "919600225546";
-
-    // Mobile Hamburger Menu Navigation Toggle
+    // Mobile Navigation Toggle
     const mobileMenuBtn = document.getElementById("mobileMenuBtn");
     const navLinks = document.getElementById("navLinks");
 
@@ -1994,14 +2029,14 @@
         qtyField.value = currentQty;
     }
 
-    // Direct Buy Now Trigger (Ready for WooCommerce / Payment Gateway redirect)
+    // Buy Now Trigger
     function proceedToBuy() {
         const qty = document.getElementById("orderQty") ? document.getElementById("orderQty").value : 1;
         alert(
             "Redirecting to Checkout...\n\n" +
             "Item: Best Herbal Black Herbal Hair Dye\n" +
             "Quantity: " + qty + "\n\n" +
-            "(Connect this handler to your WooCommerce or Razorpay payment link)"
+            "(Connect this handler to your WooCommerce or Razorpay checkout flow)"
         );
     }
 
@@ -2009,20 +2044,6 @@
     function addToCart() {
         const qty = document.getElementById("orderQty") ? document.getElementById("orderQty").value : 1;
         alert("Added " + qty + " box(es) of Best Herbal Black Herbal Hair Dye to your cart!");
-    }
-
-    // Direct WhatsApp Order Generator with Dynamic Quantity
-    function orderViaWhatsApp(event) {
-        if (event) event.preventDefault();
-        const qty = document.getElementById("orderQty") ? document.getElementById("orderQty").value : 1;
-        const textPayload = encodeURIComponent(
-            "Hello Best Herbal Team,\n\n" +
-            "I would like to order Best Herbal Black Herbal Hair Dye.\n" +
-            "• Quantity: " + qty + " box(es)\n\n" +
-            "Please share the final price and delivery details to my address. Thank you!"
-        );
-        const waUrl = "https://wa.me/" + WHATSAPP_PHONE + "?text=" + textPayload;
-        window.open(waUrl, "_blank");
     }
 </script>
 
